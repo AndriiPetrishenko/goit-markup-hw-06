@@ -519,6 +519,8 @@ img {
   width: 358px;
   height: 50px;
 
+  padding-left: 16px;
+
   font-size: 16px;
   line-height: 1.25;
 
@@ -535,7 +537,6 @@ img {
 
 .mail-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
 }
 
 .btn-subscribe {
