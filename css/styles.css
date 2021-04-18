@@ -13,6 +13,7 @@ font-family: 'Roboto', sans-serif; */
   --logo-right-header: #000000;
   --logo-right-footer: #ffffff;
   --accent-color: #2196f3;
+  --accent-color-hover: #188ce8;
   --frame-color: #eeeeee;
   --border-bottom-color: #ececec;
 
@@ -207,6 +208,14 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-heroe:hover,
+.btn-heroe:focus {
+  background-color: var(--accent-color-hover);
 }
 
 .title-section {
@@ -547,6 +556,14 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+  background-color: var(--accent-color-hover);
 }
 
 .btn-subscribe .icon {
@@ -824,6 +841,14 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .contact-form {
@@ -875,11 +900,12 @@ img {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-field:hover,
 .contact-form-field:focus {
-  background-color: yellow;
   border: 1px solid #2196f3;
   outline: none;
 }
@@ -890,11 +916,12 @@ img {
   left: 8px;
   width: 18px;
   height: 18px;
-}
 
-.contact-form-field:focus .field-icon {
-  fill: yellow;
-  width: 100px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-field:hover + .field-icon,
+.contact-form-field:focus + .field-icon {
+  fill: var(--accent-color);
 }
 
 .contact-form-comment {
@@ -913,11 +940,12 @@ img {
 
   color: rgba(117, 117, 117, 0.5);
 
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   resize: none;
 }
 .contact-form-comment:hover,
 .contact-form-comment:focus {
-  background-color: yellow;
   border: 1px solid #2196f3;
   outline: none;
 }
@@ -926,10 +954,42 @@ img {
   margin-top: 20px;
 }
 
+.check {
+  padding-left: 25px;
+}
+
+.check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.check-box {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 3px;
+  width: 16px;
+  height: 15px;
+  background-color: #fff;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.check-input:checked + .check-box {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(/images/check-icon.svg);
+}
+.check-input:focus + .check-box {
+  border-color: var(--accent-color);
+}
+
 .btn-contact-form-submit {
   min-width: 200px;
   margin-top: 30px;
-  margin-left: 25%;
+  margin-left: 50%;
+  transform: translateX(-50%);
 
   padding: 10px 32px;
   border-radius: 4px;
@@ -945,4 +1005,12 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-contact-form-submit:hover,
+.btn-contact-form-submit:focus {
+  background-color: var(--accent-color-hover);
 }
