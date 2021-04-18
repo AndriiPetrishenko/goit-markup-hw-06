@@ -979,7 +979,7 @@ img {
 .check-input:checked + .check-box {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url(/images/check-icon.svg);
+  background-image: url(./images/check-icon.svg);
 }
 .check-input:focus + .check-box {
   border-color: var(--accent-color);
